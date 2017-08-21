@@ -37,9 +37,9 @@ describe('stringKeys', function() {
   });
   describe('Creates object with keys of the string', function() {
     it('should take a number and a string and returns an object where the keys are that string, repeated one more each time', function() {
-      expect(stringKeys(2, "hello")).to.equal({"hello" : true, "hellohello" : true});
-      expect(stringKeys(0, "why")).to.equal({});
-      expect(stringKeys(3, "ok")).to.equal({"ok": true, "okok":true, "okokok": true});
+      expect(stringKeys(2, "hello")).to.deep.equal({"hello" : true, "hellohello" : true});
+      expect(stringKeys(0, "why")).to.deep.equal({});
+      expect(stringKeys(3, "ok")).to.deep.equal({"ok": true, "okok":true, "okokok": true});
     });
   });
 });
